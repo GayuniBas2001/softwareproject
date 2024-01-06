@@ -13,6 +13,7 @@
   background: linear-gradient(180deg, #33007E 0%, #9D0191 36.63%, #120078 68.92%, #9D0191 100%);
   /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; */
   margin: 0%;
+  font-family: sans-serif;
 }
 
 .NavBar-nav{
@@ -29,7 +30,7 @@
 
 .NavLink{
   color:#ffffff;
-  font-size: 18px;
+  font-size: 20px;
   /* font-family: ; */
   font-weight: bolder;
   /* word-wrap: 'break-word'; */ /*Allow long words to be able to break and wrap onto the next line*/
@@ -40,32 +41,34 @@
   color:#ffffff;
   font-size: 50px;
   /* margin: 0px; */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-weight: bolder;
-  word-wrap: 'break-word';
+  /* word-wrap: 'break-word'; */
   text-decoration: none;
 }
 
 .NavBar-nav ul{
   list-style: none;
   display: flex;
-  gap: 4rem;
+  gap: 4rem; /*gap betweek list items*/
 }
 
 .NavBar-nav button{
   width: 108px;
   height: 42px;
-  flex-shrink: 0;
+  flex-shrink: 0; /*Buttopn to not shrink when the window shrinks*/
   background-color: #ffffff;
   border: none;
   border-radius: 52px;
-
   color: #33007E;
-  font-size: 18px;
-  /* font-family: 'Times New Roman', Times, serif; */
+  font-size: 20px;
   font-weight: 800;
   /* word-wrap: break-word; */
   margin-left: auto;
+}
+
+.NavBar-nav ul li{
+  padding-bottom: 15px; /*So that the hover boarder apears 15px below the li*/
 }
 
 .NavBar-nav ul li:hover{
@@ -88,40 +91,109 @@
 } */
 
 /* ==============HomePage================= */
+.HomePage{
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  gap: 100px;
+  /* justify-content: space-evenly; */
+  margin: 0%;
+}
+
 .HomePage-ContentBG{
   width: 100%; 
   height: 100%;
   background: rgba(3.90, 3.80, 3.80, 0.5);
   display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
   margin: 0%;
 }
 
 .HomePage-Description{
-  width: 40%;
-  height: 100%;
+  width: 50%;
+  height: 500px;
   color: #ffffff;
-  font-size: 50px;
-  /* font-family: 'Inter'; */
   font-weight: 800;
   word-wrap: 'break-word';
-  text-align: left;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
   padding: 30px;
+  /* background-color: aquamarine; */
+  
+}
+
+.HomePage-Description-Paragraph{
+  font-size: 20px;
+  line-height:1.5;
+  /* margin-top:20; */
+  font-weight: 700;
+  /* margin: 30px 0px; */
 }
 
 .HomePage-IntroImage{
+  width: 50%;
+  height: 400px;
   overflow: hidden;
-  display: flex;
-  justify-content: flex-end; /* Align content to the end (right) */
-  width: 50;
-  height: 100%;
-  object-fit: cover;
-  align-items: center;
+  /* justify-content: flex-end; Align content to the end (right) */
+  /* object-fit: cover; */
+  /* align-items: center; */
+  /* background-color: rgb(127, 255, 165); */
 }
 
 .HomePage-Image{
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
+  max-width: 120%;
+  max-height: 120%;
+  width: 100%;
   height: auto;
+  align-content: center;
+}
+
+.HomePage-Description-Input{
+  /* margin: 20px 0px; */
+  position: relative;
+  width: 100%;
+  display: flex; /*me*/
+}
+.Input-Field{
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 1); /* Fully opaque white border */
+  border-radius: 100px;
+  padding: 10px 100px 10px 20px; 
+  line-height: 1;
+  box-sizing: border-box;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5); /* White background with 0.5 opacity */
+  /* opacity: 0.5; */
+  &::placeholder{
+    color: #0ef21d; 
+    font-size: 18px;
+  }
+}
+
+.HomePage-Description-Input .GetStarted{
+  position: absolute;
+  right: 0px; 
+  top: 0px;
+  bottom: 0px;
+  border: 0;
+  background-color: #ffffff;
+  color: #33007E;
+  font-size: 18px;
+  font-weight: 800;
+  outline: none;
+  margin: 0;
+  padding: 0 20px;
+  border-radius: 0px 100px 100px 0px; 
+  z-index: 2;
+  &:hover {
+    opacity: 0.7;
+    background-color: #ffffff;
+  }
 }
 
